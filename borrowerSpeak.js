@@ -7,3 +7,11 @@
 // Change the input text s to new borrower speak. Help save the next generation!
 
 // My Solution:
+
+function borrow(s) {
+  return s
+    .split("")
+    .filter((x) => (x >= "a" && x <= "z") || (x >= "A" && x <= "Z"))
+    .map((x) => x.toLowerCase())
+    .join("");
+}

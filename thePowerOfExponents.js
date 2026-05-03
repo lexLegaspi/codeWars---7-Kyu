@@ -9,3 +9,17 @@
 // Note: The ** operator (JS: Math.pow) has been disabled.
 
 // My Solution:
+
+function power(base, exponent) {
+  // ...
+  let result = 1;
+  let exp = exponent;
+  if (exp < 1) {
+    exp = -exp;
+  }
+  for (let i = 0; i < exp; i++) {
+    result = result * base;
+  }
+
+  return exponent < 0 ? 1 / result : result;
+}

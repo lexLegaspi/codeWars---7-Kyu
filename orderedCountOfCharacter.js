@@ -8,3 +8,15 @@
 
 // My Solution:
 
+const orderedCount = function (text) {
+  let map = new Map();
+
+  for (let ch of text) {
+    if (!map.has(ch)) {
+      map.set(ch, 1);
+    } else {
+      map.set(ch, map.get(ch) + 1);
+    }
+  }
+  return Array.from(map.entries());
+};

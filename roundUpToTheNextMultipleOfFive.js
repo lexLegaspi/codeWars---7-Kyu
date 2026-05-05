@@ -17,3 +17,11 @@ Input may be any positive or negative integer (including 0).
 You can assume that all inputs are valid integers.
 
 My Solution:
+
+function roundToNext5(n){
+  // ...
+  for (let i = 0; i<5;i++){
+    if(Math.abs(n+i)%5==0) return n+i
+  }
+  return n
+}

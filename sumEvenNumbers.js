@@ -9,3 +9,10 @@
 // []                               -->  0
 
 // My Solution:
+
+function sumEvenNumbers(input) {
+  // [...]
+  return input
+    .filter((x) => x % 2 == 0 && Number.isInteger(x))
+    .reduce((a, b) => a + b, 0);
+}

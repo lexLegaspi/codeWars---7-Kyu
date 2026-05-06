@@ -20,6 +20,14 @@
 
 // consist only of lowercase English letters.
 
-
-
 // My Solution:
+
+function passTheDoorMan(word) {
+  let current = "";
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] == current) {
+      return (word[i].charCodeAt(0) - 96) * 3;
+    }
+    current = word[i];
+  }
+}

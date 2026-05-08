@@ -9,3 +9,8 @@
 
 
 // My Solution:
+
+function shortForm(str) {
+  // do something
+  return str[0]+str.slice(1,-1).split('').filter(x => !'AEIOUaeiou'.includes(x)).join('')+str[str.length-1]
+}

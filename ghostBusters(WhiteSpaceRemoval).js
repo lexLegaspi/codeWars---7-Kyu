@@ -13,3 +13,9 @@
 // "You just wanted my autograph didn't you?"
 
 // My Solution:
+
+function ghostBusters(building) {
+  if (building.split(" ").join("").length != building.length) {
+    return building.split(" ").join("");
+  } else return "You just wanted my autograph didn't you?";
+}

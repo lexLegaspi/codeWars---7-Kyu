@@ -11,3 +11,10 @@
 // numbers(1, 3, NaN); // true
 
 // My Solution:
+
+function numbers(num) {
+  for (let i = 0; i < [...arguments].length; i++) {
+    if (typeof [...arguments][i] != "number") return false;
+  }
+  return true;
+}

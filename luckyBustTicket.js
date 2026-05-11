@@ -7,5 +7,22 @@
 // isLucky('22') => false // :(
 // isLucky('abcdef') => false // :(
 
-
 // My Solution:
+
+function isLucky(ticket) {
+  const isInt = (x) => Number.isInteger(x);
+  if (ticket.length != 6) return false;
+  if (typeof Number(ticket) != "number") return false;
+  let half1 = ticket
+    .slice(0, ticket.length / 2)
+    .split("")
+    .map(Number)
+    .reduce((a, b) => a + b, 0);
+  let half2 = ticket
+    .slice(ticket.length / 2)
+    .split("")
+    .map(Number)
+    .reduce((a, b) => a + b, 0);
+
+  return half1 == half2;
+}

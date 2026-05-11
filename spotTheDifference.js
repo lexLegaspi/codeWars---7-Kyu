@@ -17,3 +17,16 @@
 // • Capitalization and punctuation matter
 
 // My Solution:
+
+function spot(s1, s2) {
+  // Code here
+  s1 = s1.split("");
+  s2 = s2.split("");
+  let result = [];
+  s1.forEach((x, i) => {
+    if (x != s2[i]) {
+      result.push(i);
+    }
+  });
+  return result;
+}

@@ -5,3 +5,15 @@
 // If the sequence is empty, you should return 0.
 
 // My Solution:
+
+function evenLast(numbers) {
+  // Good luck
+  if (numbers.length == 0) return 0;
+  let result = 0;
+  numbers.forEach((x, i) => {
+    if (i % 2 == 0) {
+      result += x;
+    }
+  });
+  return result * numbers[numbers.length - 1];
+}

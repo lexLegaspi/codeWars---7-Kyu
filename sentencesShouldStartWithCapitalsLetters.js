@@ -18,6 +18,11 @@
 
 // all but the last full stop will be followed by a space and at least one word
 
-
-
 // My Solution:
+
+function fix(paragraph) {
+  if (paragraph == "") return "";
+  paragraph = paragraph.split(". ");
+
+  return paragraph.map((x) => x[0].toUpperCase() + x.slice(1)).join(". ");
+}

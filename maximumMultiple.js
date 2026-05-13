@@ -19,3 +19,16 @@
 // divisor = 10, bound = 50 ==> return (50)
 
 // My Solution:
+
+function maxMultiple(divisor, bound) {
+  //your code here
+  let n = 1;
+  let current = 0;
+  while (n <= bound) {
+    if (n % divisor == 0) {
+      current = n;
+    }
+    n++;
+  }
+  return current;
+}

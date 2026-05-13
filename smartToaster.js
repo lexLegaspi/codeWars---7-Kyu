@@ -16,3 +16,16 @@
 // If you use ES6 features like Let and Const declaration, the code will get longer due to the transformation by babel.
 
 // My Solution:
+
+function toaster(breadType) {
+  let x = breadType.toLowerCase();
+  return x == "white bread"
+    ? "1 min"
+    : x == "frozen white bread"
+      ? "1.5 mins"
+      : x == "brown bread"
+        ? "2 mins"
+        : x == "frozen brown bread"
+          ? "3 mins"
+          : "Please do not put that in the toaster!";
+}

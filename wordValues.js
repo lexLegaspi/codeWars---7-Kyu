@@ -18,3 +18,18 @@
 
 // My Solution:
 
+function wordValue(words) {
+  let result = [];
+  words.forEach((word, i) => {
+    word = word.split(" ").join("");
+    word =
+      word
+        .split("")
+        .map((x) => (x.charCodeAt(0) - 96))
+        .reduce((a, b) => a + b, 0) *
+      (i + 1);
+    result.push(word);
+  });
+
+  return result;
+}

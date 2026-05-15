@@ -10,9 +10,8 @@
 // My Soluttion:
 
 const ultimateReverse = (s) => {
-  let lengths = [];
   let reversed = s.join("").split("").reverse().join("");
-  s = s.map((x, i) => {
+  s = s.map((x) => {
     x = reversed.slice(0, x.length);
     reversed = reversed.slice(x.length);
     return x;

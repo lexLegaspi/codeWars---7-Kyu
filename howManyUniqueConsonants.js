@@ -14,4 +14,20 @@
 // "abcdefghijklmnopqrstuvwxyz" ==> 21
 // "Count my unique consonants!!" ==> 7
 
-// My Solution: 
+// My Solution:
+
+function countConsonants(str) {
+  // Your code here!
+  str = str.toLowerCase();
+  let vowels = "aeiou";
+  let consonants = [];
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= "a" && str[i] <= "z" && !vowels.includes(str[i])) {
+      if (!consonants.includes(str[i])) {
+        consonants.push(str[i]);
+      }
+    }
+  }
+  return consonants.length;
+}

@@ -8,3 +8,13 @@
 // [1, "a", 2] --> false / False (depending on the language)
 
 // My Solution:
+
+function arr2bin(arr) {
+  //GET STARTED
+
+  if (!arr.every((x) => Number.isInteger(x))) {
+    return false;
+  }
+
+  return arr.reduce((a, b) => a + b, 0).toString(2);
+}

@@ -10,3 +10,14 @@
 // twoArePositive(-14, -3, -4) == false
 
 // My Solution:
+
+function twoArePositive(a, b, c) {
+  // Happy Coding
+  let pos = 0;
+
+  for (let i = 0; i < [...arguments].length; i++) {
+    if ([...arguments][i] > 0) pos++;
+  }
+
+  return pos == 2;
+}

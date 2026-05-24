@@ -11,3 +11,16 @@
 // Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
 
 // My Solution:
+
+function isPowerOfTwo(n) {
+  if (n % 2 != 0 && n !== 1) return false;
+  if (n == 1) return true;
+  let i = n;
+
+  while (i >= 2) {
+    if (i == 2) return true;
+    i /= 2;
+  }
+
+  return false;
+}

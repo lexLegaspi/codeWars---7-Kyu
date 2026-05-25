@@ -10,3 +10,22 @@
 // * Note that the returned value should be rounded to the nearest penny.
 
 // My Solution:
+
+function taxCalculator(total) {
+  let excess = total - 30;
+  // Return the amount of tax for the supplied total
+  if (total > 30) {
+    let excess = total - 30;
+    return +(2.2 + excess * 0.03).toFixed(2);
+  } else if (total > 20 && total <= 30) {
+    let excess = total - 20;
+    return +(1.7 + excess * 0.05).toFixed(2);
+  } else if (total > 10 && total <= 20) {
+    let excess = total - 10;
+    return +(1 + excess * 0.07).toFixed(2);
+  } else if (Number.isInteger(total) && total > 0) {
+    return +(total * 0.1).toFixed(2);
+  } else {
+    return 0;
+  }
+}

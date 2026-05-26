@@ -16,3 +16,11 @@
 
 // My Solution:
 
+function getSumOfDigits(integer) {
+  var sum = 0;
+  var digits = integer.toString().split("").map(Number);
+  for (var ix = 0; ix < digits.length; ix++) {
+    sum += digits[ix];
+  }
+  return sum;
+}

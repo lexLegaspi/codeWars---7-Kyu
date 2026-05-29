@@ -15,3 +15,17 @@
 
 // My Solution:
 
+function removeSmallest(numbers) {
+  let lowest = null;
+  for (let i = 0; i < numbers.length; i++) {
+    if (lowest === null) {
+      lowest = numbers[i];
+    } else {
+      if (numbers[i] < lowest) {
+        lowest = numbers[i];
+      }
+    }
+  }
+  let index = numbers.findIndex((x) => x === lowest);
+  return numbers.slice(0, index).concat(numbers.slice(index + 1));
+}

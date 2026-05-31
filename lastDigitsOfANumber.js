@@ -17,3 +17,8 @@
 // result = [6, 3, 7, 5, 4, 7]
 
 // My Solution:
+function lastDigit(n, d) {
+  if (d <= 0) return [];
+  if (d > String(n).length) return String(n).split("").map(Number);
+  return String(n).split("").map(Number).slice(-d);
+}

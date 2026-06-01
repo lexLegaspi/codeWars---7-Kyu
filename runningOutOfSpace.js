@@ -3,3 +3,12 @@
 
 // My Solution:
 
+function spacey(array) {
+  let result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    result.push(array.slice(0, i + 1).join(""));
+  }
+
+  return result;
+}

@@ -9,3 +9,16 @@
 // 'Alice Betty Catherine Davis' => 'Alice B. C. Davis'
 
 // My Solution:
+
+function initializeNames(name) {
+  // Insert your brilliant code here
+  if (name.split(" ").length <= 2) return name;
+
+  let initials = name
+    .split(" ")
+    .slice(1, -1)
+    .map((x) => x[0] + ".")
+    .join(" ");
+  name = name.split(" ");
+  return name[0] + " " + initials + " " + name[name.length - 1];
+}

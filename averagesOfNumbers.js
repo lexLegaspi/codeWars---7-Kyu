@@ -11,3 +11,18 @@
 // Have fun coding it and please don't forget to vote and rank this kata! :-)
 
 // My Solution:
+
+
+function averages(numbers) {
+  if (!numbers || numbers.length <= 1) return [];
+
+  if (numbers.some(x => x == null)) return [];
+
+  const result = [];
+
+  for (let i = 0; i < numbers.length - 1; i++) {
+    result.push((numbers[i] + numbers[i + 1]) / 2);
+  }
+
+  return result;
+}

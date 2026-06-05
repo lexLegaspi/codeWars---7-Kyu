@@ -6,7 +6,7 @@
 // If it has 2 or more digits, it is "Very Even" if the sum of its digits is "Very Even".
 
 // Examples
-// number = 88 => returns false -> 8 + 8 = 16 -> 1 + 6 = 7 => 7 is odd 
+// number = 88 => returns false -> 8 + 8 = 16 -> 1 + 6 = 7 => 7 is odd
 
 // number = 222 => returns true -> 2 + 2 + 2 = 6 => 6 is even
 
@@ -16,3 +16,13 @@
 // Note: The numbers will always be 0 or positive integers!
 
 // My Solution:
+
+function isVeryEvenNumber(n) {
+  if (n % 2 == 0 && n < 10) return true;
+  else if (n % 2 != 0 && n < 10) return false;
+  let newN = String(n)
+    .split("")
+    .map(Number)
+    .reduce((a, b) => a + b, 0);
+  return isVeryEvenNumber(newN);
+}

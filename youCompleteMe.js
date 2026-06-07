@@ -25,3 +25,17 @@
 // (aab) => aab + aa => aabaa
 
 // My Solution:
+
+const complete = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    let rev = str
+      .slice(0, i + 1)
+      .split("")
+      .reverse()
+      .join("");
+    let result = str.concat(rev);
+    if (result == result.split("").reverse().join("")) {
+      return result;
+    }
+  }
+};

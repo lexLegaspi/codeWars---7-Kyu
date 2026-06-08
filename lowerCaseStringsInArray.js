@@ -5,3 +5,14 @@
 // arrayLowerCase([1, 'Green']) == [1, 'green']
 
 // My Solution:
+
+function arrayLowerCase(arr) {
+  // return array of strings in lowercase
+  return arr.map((x) => {
+    if (typeof x == "string") {
+      return x.toLowerCase();
+    } else {
+      return x;
+    }
+  });
+}

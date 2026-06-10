@@ -6,5 +6,13 @@
 // ["parses", "parsecs"]    =>  false
 // Function should not be case sensitive, as indicated in example #2. Note: both strings are presented as a single argument in the form of an array.
 
-
 // My Solution:
+
+function letterCheck(arr) {
+  //write your code here!!
+
+  return arr[1]
+    .toLowerCase()
+    .split("")
+    .every((x) => arr[0].toLowerCase().includes(x));
+}

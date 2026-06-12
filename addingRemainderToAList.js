@@ -7,7 +7,7 @@
 
 // Examples
 // nums = [2, 7, 5, 9, 100, 34, 32, 0], div = 3
-//   ==>  [4, 8, 7, 9, 101, 35, 34, 0] 
+//   ==>  [4, 8, 7, 9, 101, 35, 34, 0]
 
 // nums = [1000, 999, 998, 997], div = 5
 //    ==> [1000, 1003, 1001, 999]
@@ -17,3 +17,7 @@
 // Note: random tests check lists containing up to 10000 elements.
 
 // My Solution:
+
+function solve(nums, div) {
+  return nums.map((x) => x + (x % div));
+}

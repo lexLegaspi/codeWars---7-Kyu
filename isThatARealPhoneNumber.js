@@ -20,3 +20,12 @@
 
 // My Solution:
 
+function validateNumber(str) {
+  //Your code here
+  str = str.split("-").join("");
+  if (str == "" || str.length < 11) return "Plenty more fish in the sea";
+  if (str.length == 11 && str.slice(0, 2) == "07") return "In with a chance";
+  if (str.length == 13 && str.slice(0, 3) == "+44") return "In with a chance";
+
+  return "Plenty more fish in the sea";
+}

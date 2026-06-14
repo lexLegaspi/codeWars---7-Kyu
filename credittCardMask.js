@@ -13,3 +13,14 @@
 // "Nananananananananananananananana Batman!" --> "####################################man!"
 
 // My Solution:
+
+function maskify(cc) {
+  return [
+    cc
+      .slice(0, -4)
+      .split("")
+      .map((x) => "#")
+      .join(""),
+    cc.slice(-4),
+  ].join("");
+}

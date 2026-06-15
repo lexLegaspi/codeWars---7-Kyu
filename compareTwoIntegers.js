@@ -25,6 +25,15 @@
 
 // For a = "1000" and b = "1000", the output should be "equal".
 
-
-
 // My Solution:
+
+function compareIntegers(a, b) {
+  //coding and coding..
+  if (BigInt(a) === BigInt(b)) {
+    return "equal";
+  } else if (BigInt(a) > BigInt(b)) {
+    return "greater";
+  } else {
+    return "less";
+  }
+}

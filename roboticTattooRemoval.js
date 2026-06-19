@@ -41,5 +41,9 @@
 // [' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']
 // ]
 
-
 // My Solution:
+
+function robot(skinScan) {
+  // code code code
+  return skinScan.map((row) => row.map((x) => (x === "X" ? "*" : x)));
+}

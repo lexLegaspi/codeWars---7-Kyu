@@ -22,3 +22,14 @@
 // The input can be modified
 
 // My Solution:
+
+function nicknameGenerator(name) {
+  //code goes here
+  let vowels = "aeiou";
+  if (name.length < 4) return "Error: Name too short";
+  if (vowels.includes(name.toLowerCase()[2])) {
+    return name.slice(0, 4);
+  } else {
+    return name.slice(0, 3);
+  }
+}

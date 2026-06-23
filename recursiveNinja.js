@@ -7,3 +7,10 @@
 // javascript/coffescript: don't use the String method .repeat(), write a recursive function, remember you're a Ninja!
 
 // My Solution:
+
+function chirp(n) {
+  if (n === 1) {
+    return "chirp";
+  }
+  return "chirp-" + chirp(n - 1);
+}

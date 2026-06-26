@@ -13,3 +13,17 @@
 // You can assume that there will be no division by 0
 
 // My Solution:
+
+function calcType(a, b, res) {
+  // your code here
+
+  let sum = a + b;
+  let dif = a - b;
+  let prod = a * b;
+  let quo = a / b;
+
+  if (res === sum) return "addition";
+  else if (res === dif) return "subtraction";
+  else if (res === prod) return "multiplication";
+  else if (res === quo) return "division";
+}

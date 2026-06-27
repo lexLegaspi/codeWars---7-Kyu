@@ -26,3 +26,10 @@
 // ['xxd', 'xxc', 'xxb', 'xxa', 'xd', 'xc', 'xb', 'xa']
 
 // My Solution:
+
+function lineupStudents(students) {
+  //your code here
+  return students
+    .split(" ")
+    .sort((a, b) => b.length - a.length || b.localeCompare(a));
+}

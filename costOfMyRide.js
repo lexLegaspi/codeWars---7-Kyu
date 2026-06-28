@@ -17,5 +17,18 @@
 // insurance(21,"economy",-10); // => 0
 // insurance(42,"my custom car",7); // => 455
 
-
 // My Solution:
+
+function insurance(age, size, numofdays) {
+  //code here
+  if (numofdays < 1) return 0;
+  let total = 0;
+  total += numofdays * 50;
+  if (age < 25) total += numofdays * 10;
+  if (size === "medium") {
+    total += numofdays * 10;
+  } else if (size !== "economy") {
+    total += numofdays * 15;
+  }
+  return total;
+}

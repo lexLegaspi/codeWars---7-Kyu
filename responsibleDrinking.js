@@ -13,6 +13,15 @@
 
 // To keep the things simple, we'll consider that any "numbered thing" in the string is a drink. Even "1 bear" -> "1 glass of water"; or "1 chainsaw and 2 pools" -> "3 glasses of water"...
 
-
-
 // My Solution:
+
+function hydrate(s) {
+  // your code here
+  s = s
+    .split(" ")
+    .filter((x) => Number.isInteger(Number(x)))
+    .map(Number)
+    .reduce((a, b) => a + b, 0);
+
+  return s > 1 ? s + " glasses of water" : s + " glass of water";
+}

@@ -15,3 +15,13 @@
 // 6. 3 / 2 = 1 remainder 1
 
 // My Solution:
+
+const divisions = (n, divisor) => {
+  let count = 0;
+
+  while (n > divisor) {
+    n = n / divisor;
+    count++;
+  }
+  return count;
+};

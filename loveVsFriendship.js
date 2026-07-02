@@ -11,3 +11,11 @@
 // The input will always be made of only lowercase letters and will never be empty.
 
 // My Solution:
+
+function wordsToMarks(string) {
+  string = string
+    .split("")
+    .map((x) => x.charCodeAt(0) - 96)
+    .reduce((a, b) => a + b, 0);
+  return string;
+}

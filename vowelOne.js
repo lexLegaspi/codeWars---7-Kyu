@@ -10,3 +10,12 @@
 // vowelOne( "aeiou, abc" ) // "1111100100"
 
 // My Solution:
+
+function vowelOne(s) {
+  // ...
+  return s
+    .toLowerCase()
+    .split("")
+    .map((x) => ("aeiou".includes(x) ? "1" : "0"))
+    .join("");
+}

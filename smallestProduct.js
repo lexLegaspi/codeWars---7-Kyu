@@ -10,3 +10,8 @@
 // result = 2
 
 // My Solution:
+
+function smallestProduct(arr) {
+  // Code goes here
+  return Math.min(...arr.map((x) => x.reduce((a, b) => a * b, 1)));
+}

@@ -13,3 +13,11 @@
 // Sum of integer combinations
 
 // My Solution:
+
+function repeats(arr) {
+  //..
+  arr = arr
+    .filter((x) => arr.indexOf(x) === arr.lastIndexOf(x))
+    .reduce((a, b) => a + b, 0);
+  return arr;
+}

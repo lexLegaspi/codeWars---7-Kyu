@@ -18,3 +18,14 @@
 // Bouncing Proportion is a decimal in range [0, 1)
 
 // My Solution:
+
+function bouncingBall(initial, proportion) {
+  // your code here
+  let count = 0;
+  while (initial > 1) {
+    initial = initial * proportion;
+    count++;
+  }
+
+  return count;
+}

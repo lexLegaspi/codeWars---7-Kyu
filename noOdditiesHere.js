@@ -3,3 +3,8 @@
 // All values in the array will be integers. Return the good values in the order they are given.
 
 // My Solution:
+
+function noOdds(values) {
+  // Return all non-odd values
+  return values.filter((x) => x % 2 == 0);
+}

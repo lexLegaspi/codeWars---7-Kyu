@@ -9,3 +9,18 @@
 // "apple"  ==>  "pplae"
 
 // My Solution:
+
+function moveVowel(input) {
+  let cons = "";
+  let vow = "";
+
+  for (let i = 0; i < input.length; i++) {
+    if ("aeiou".includes(input[i])) {
+      vow += input[i];
+    } else {
+      cons += input[i];
+    }
+  }
+
+  return cons + vow;
+}

@@ -5,5 +5,14 @@
 // reverseMessage('This is an example of a Reversed Message!')
 // Returns: '!egassem Desrever A Fo Elpmaxe Na Si Siht'
 
-
 // My Solution:
+
+function reverseMessage(str) {
+  return str
+    .split("")
+    .reverse()
+    .join("")
+    .split(" ")
+    .map((x) => x.slice(0, 1).toUpperCase() + x.slice(1).toLowerCase())
+    .join(" ");
+}

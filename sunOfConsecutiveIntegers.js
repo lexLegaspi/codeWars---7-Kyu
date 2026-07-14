@@ -10,3 +10,9 @@
 
 
 // My Solution:
+
+function position(x, y, n) {
+  const startSum = x * (x + 1) / 2;
+  const shift = (y - startSum) / x;
+  return n + 1 + shift;
+}

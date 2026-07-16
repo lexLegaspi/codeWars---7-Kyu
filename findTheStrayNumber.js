@@ -9,3 +9,7 @@
 // [17, 17, 3, 17, 17, 17, 17] ==> 3
 
 // My Solution:
+
+function stray(numbers) {
+  return numbers.find((x) => numbers.indexOf(x) === numbers.lastIndexOf(x));
+}

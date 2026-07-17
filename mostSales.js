@@ -8,3 +8,16 @@
 // Note: if multiple products have the same revenue, order them according to their original positions in the input list.
 
 // My Solution:
+
+function top3(products, amounts, prices) {
+  let revenue = [];
+
+  for (let i = 0; i < products.length; i++) {
+    revenue.push(amounts[i] * prices[i]);
+  }
+  return products
+    .map((x, i) => [x, revenue[i]])
+    .sort((a, b) => b[1] - a[1])
+    .map((x) => x[0])
+    .slice(0, 3);
+}

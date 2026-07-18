@@ -10,3 +10,15 @@
 // Good luck! :D
 
 // My Solution:
+
+function timeConvert(num) {
+  if (num <= 0) return "00:00";
+  let hr = 0;
+  Math.floor(num / 60) < 10
+    ? (hr = "0" + Math.floor(num / 60))
+    : (hr = Math.floor(num / 60));
+  let mn = 0;
+  num % 60 < 10 ? (mn = "0" + (num % 60)) : (mn = num % 60);
+
+  return hr + ":" + mn;
+}

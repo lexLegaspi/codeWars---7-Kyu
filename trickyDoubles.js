@@ -19,3 +19,10 @@
 
 // My Solution:
 
+function trickyDoubles(n) {
+  //insert your code here
+  let len = String(n).length;
+  if (len % 2 === 0 && String(n).slice(0, len / 2) === String(n).slice(len / 2))
+    return n;
+  else return n * 2;
+}

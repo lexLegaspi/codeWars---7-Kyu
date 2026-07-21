@@ -10,3 +10,16 @@
 // "123abc!" is a valid word because all of the characters only appear once in the word.
 
 // My Solution:
+
+function validateWord(s) {
+  //Code goes here!
+  s = s.toLowerCase();
+  let obj = {};
+  for (let i = 0; i < s.length; i++) {
+    if (!obj[s[i]]) {
+      obj[s[i]] = s.split(s[i]).length - 1;
+      if (obj[s[i - 1]] && obj[s[i - 1]] !== obj[s[i]]) return false;
+    }
+  }
+  return true;
+}

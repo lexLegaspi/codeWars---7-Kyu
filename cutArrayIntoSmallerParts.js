@@ -15,8 +15,16 @@
 // Chunk size: 1
 // Expected solution --> [[1], [2], [3]]
 
-// Array: [1, 2, 3, 4, 5] 
+// Array: [1, 2, 3, 4, 5]
 // Chunk size: 2
 // Expected solution --> [[1, 2], [3, 4], [5]]
 
 // My Solution:
+
+function makeParts(arr, chunkSize) {
+  let array = [];
+  while (arr.length != 0) {
+    array.push(arr.splice(0, chunkSize));
+  }
+  return array;
+}

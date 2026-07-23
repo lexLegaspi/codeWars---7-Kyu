@@ -2,11 +2,30 @@
 
 // - first remove all letter 'a', followed by letter 'b', then 'c', etc...
 // - remove the leftmost character first.
-// For example: 
+// For example:
 // solve('abracadabra', 1) = 'bracadabra' # remove the leftmost 'a'.
 // solve('abracadabra', 2) = 'brcadabra'  # remove 2 'a' from the left.
-// solve('abracadabra', 6) = 'rcdbr'      # remove 5 'a', remove 1 'b' 
+// solve('abracadabra', 6) = 'rcdbr'      # remove 5 'a', remove 1 'b'
 // solve('abracadabra', 8) = 'rdr'
 // solve('abracadabra',50) = ''
 
 // My Solution:
+
+function solve(s, k) {
+  for (let code = 97; code <= 122 && k > 0; code++) {
+    const current = String.fromCharCode(code);
+    let result = "";
+
+    for (let i = 0; i < s.length; i++) {
+      if (s[i] === current && k > 0) {
+        k--;
+      } else {
+        result += s[i];
+      }
+    }
+
+    s = result;
+  }
+
+  return s;
+}

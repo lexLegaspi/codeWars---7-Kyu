@@ -11,6 +11,26 @@
 
 // Return "" for empty, nil or non numeric strings
 
-
-
 // My Solution:
+
+function countMe(data) {
+  if (!data) return "";
+
+  let result = "";
+  let count = 1;
+
+  for (let i = 0; i < data.length; i++) {
+    if (data[i] < "0" || data[i] > "9") {
+      return "";
+    }
+
+    if (data[i] === data[i + 1]) {
+      count++;
+    } else {
+      result += count + data[i];
+      count = 1;
+    }
+  }
+
+  return result;
+}

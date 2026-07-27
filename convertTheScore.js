@@ -31,21 +31,9 @@ function scoreboard(string) {
     "eight",
     "nine",
   ];
-  let wordsObj = {
-    nil: 0,
-    one: 1,
-    two: 2,
-    three: 3,
-    four: 4,
-    five: 5,
-    six: 6,
-    seven: 7,
-    eight: 8,
-    nine: 9,
-  };
   for (let i = 0; i < string.length; i++) {
     if (words.includes(string[i])) {
-      score = [wordsObj[string[i - 1]], wordsObj[string[i]]];
+      score = [words.indexOf(string[i - 1]), words.indexOf(string[i])];
     }
   }
   return score;

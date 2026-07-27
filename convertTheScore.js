@@ -7,10 +7,46 @@
 // Either teams score has a range of 0-9, and the ref won't say the same string every time e.g.
 
 // "new score: two three"
-  
+
 // "two two"
-  
+
 // "Arsenal just conceded another goal, two nil"
 // Please rate and enjoy!
 
 // My Solution:
+
+function scoreboard(string) {
+  // code here!
+  string = string.split(" ");
+  let score = [];
+  let words = [
+    "nil",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+  ];
+  let wordsObj = {
+    nil: 0,
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    nine: 9,
+  };
+  for (let i = 0; i < string.length; i++) {
+    if (words.includes(string[i])) {
+      score = [wordsObj[string[i - 1]], wordsObj[string[i]]];
+    }
+  }
+  return score;
+}

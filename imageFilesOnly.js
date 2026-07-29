@@ -9,9 +9,33 @@
 
 // So:
 // imageFilter(["index.html", "favicon.gif"])
-// return [null, ["favicon.gif", "favicon", "gif"]] 
+// return [null, ["favicon.gif", "favicon", "gif"]]
 
 // !Non Case Sensitive, so a file with the extension .jpg or .JPG is still an image.
 
 // My Solution:
 
+function imageFilter(arr) {
+  const img = ["jpg", "gif", "png", "tiff", "svg", "bmp"];
+  const result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    const parts = arr[i].split(".");
+
+    if (parts.length < 2) {
+      result.push(null);
+      continue;
+    }
+
+    const ext = parts[parts.length - 1];
+    const fileName = parts.slice(0, -1).join(".");
+
+    if (fileName !== "" && img.includes(ext.toLowerCase())) {
+      result.push([arr[i], fileName, ext]);
+    } else {
+      result.push(null);
+    }
+  }
+
+  return result;
+}

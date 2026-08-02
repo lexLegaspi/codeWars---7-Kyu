@@ -41,3 +41,27 @@
 // After consecutive duplicates are ignored, fewer than three readings produce 0.
 
 // My Solution:
+
+function countDirectionChanges(readings) {
+  // Your solution here 
+  if (readings.length <= 1) return 0
+  
+  let count = 0
+  let trend = 'up'
+  if(readings[0] < readings[1]) {
+    trend = 'up'
+  }else if(readings[0] > readings[1]){
+    trend = 'down'
+  }
+  
+  for (let i=2; i<readings.length;i++){
+    if (readings[i] < readings[i-1] && trend =='up'){
+      count++
+      trend = 'down'
+    }else if(readings[i] > readings[i-1] && trend =='down'){
+      count++
+      trend = 'up'
+    }
+  }
+  return count
+}

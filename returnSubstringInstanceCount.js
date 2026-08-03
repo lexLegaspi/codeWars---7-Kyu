@@ -6,8 +6,12 @@
 // full_text = "aa_bb_cc_dd_bb_e", search_text = "bb"
 // --> should return 2 since "bb" shows up twice
 
-
 // full_text = "aaabbbcccc", search_text = "bbb"
 // --> should return 1
 
 // My Solution:
+
+function solution(fullText, search) {
+  // Do your thing.
+  return fullText.split(search).length - 1;
+}

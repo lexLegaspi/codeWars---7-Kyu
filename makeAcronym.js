@@ -12,3 +12,11 @@
 // Note: There will be at least two words in the given string!
 
 // My solution:
+
+function toAcronym(inp) {
+  // ...
+  return inp
+    .split(" ")
+    .map((x) => x[0].toUpperCase())
+    .join("");
+}

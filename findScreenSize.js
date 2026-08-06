@@ -6,3 +6,9 @@
 // Note: The calculated height should be represented as an integer. If the height is fractional, truncate it.
 
 // My Solution:
+
+function findScreenHeight(width, ratio) {
+  // Happy coding :)
+  let numRatio = ratio.split(":");
+  return String(width) + "x" + (width / numRatio[0]) * numRatio[1];
+}

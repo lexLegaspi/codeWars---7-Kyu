@@ -11,3 +11,16 @@
 // 1 <= x <= 105
 
 // My Solution:
+
+function minimum(a, x) {
+  // your solution here
+  if (a === x) return 0;
+  console.log(a + " " + x);
+  let i = 1;
+
+  while (true) {
+    if ((a + i) % x == 0) return i;
+    if ((a - i) % x == 0) return i;
+    i++;
+  }
+}

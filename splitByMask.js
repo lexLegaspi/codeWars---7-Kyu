@@ -11,3 +11,15 @@
 // Otherwise, return None, Nothing or a similar empty value.
 
 // My Solution:
+
+function split(string,mask) {
+  if (string.length !== mask.reduce((a,b) => a+b,0)) return null
+  let result = []
+  
+  for (let i = 0; i<mask.length;i++){
+    result.push(string.slice(0,mask[i]))
+    string = string.slice(mask[i])
+  }
+  
+  return result
+}

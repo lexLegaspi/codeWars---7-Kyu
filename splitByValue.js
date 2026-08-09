@@ -11,3 +11,13 @@
 
 
 // My Solution:
+
+function splitByValue(k, elements) {
+  let left = []
+  let right =[]
+  for (let i=0;i<elements.length;i++){
+    if(elements[i] < k) left.push(elements[i])
+    else right.push(elements[i])
+  }
+  return left.concat(right);
+}

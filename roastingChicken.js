@@ -12,6 +12,19 @@
 
 // An example time is 2 hrs 45 mins
 
-
-
 // My Solution:
+
+function cookingTime(weight) {
+  if (weight === 0) return "There is no chicken!";
+  let units = weight / 0.45;
+  let total = Math.ceil((units * 20 + 20) / 5) * 5;
+  let hour = Math.floor(total / 60);
+  let minutes = total % 60;
+  let result = "";
+  if (hour > 1) {
+    result += hour + " hrs";
+  } else if (hour == 1) result += hour + " hr";
+  if (minutes > 0) result += " " + minutes + " mins";
+
+  return result.trim();
+}

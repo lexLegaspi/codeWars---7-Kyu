@@ -15,3 +15,20 @@
 // Notice the grid is a monodimensional array, good luck!
 
 // My Solution:
+
+function fire(x, y) {
+  // YOUR CODE HERE.
+  let grid = [
+    "top left",
+    "top middle",
+    "top right",
+    "middle left",
+    "center",
+    "middle right",
+    "bottom left",
+    "bottom middle",
+    "bottom right",
+  ];
+
+  return grid[y * 3 + x];
+}

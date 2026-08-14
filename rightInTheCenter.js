@@ -17,3 +17,11 @@
 // is_in_middle("AabcBBB")  ->  False
 
 // My Solution:
+
+function isInMiddle(seq) {
+  // your goes below
+  if (!seq.includes("abc")) return false;
+  let split = seq.split("abc");
+  if ((split.length - 1) % 2 === 0) return false;
+  return Math.abs(split[0].length - split[1].length) <= 1;
+}

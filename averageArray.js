@@ -24,3 +24,13 @@
 // average:   [22.5, 11, 38.75, 38.25, 19.5]
 
 // My Solution:
+
+function avgArray(arr) {
+  let result = arr[0].map((x) => 0);
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      result[j] += arr[i][j];
+    }
+  }
+  return result.map((x) => x / arr.length);
+}

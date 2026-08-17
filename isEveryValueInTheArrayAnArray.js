@@ -8,5 +8,12 @@
 // ['1','2'] => false
 // [{1:1},{2:2}] => false
 
-
 // My Solution:
+
+const arrCheck = (value) => {
+  for (let x of value) {
+    if (!Array.isArray(x)) return false;
+  }
+
+  return true;
+};

@@ -20,3 +20,20 @@
 // Note: Your balance is allowed to go below 0.
 
 // My Solution:
+
+function martingale(bank, outcomes) {
+  //beat the house here...
+  if (outcomes.length == 0) return bank;
+  let bet = 100;
+  for (let i = 0; i < outcomes.length; i++) {
+    if (outcomes[i]) {
+      bank += bet;
+      bet = 100;
+    } else {
+      bank -= bet;
+      bet *= 2;
+    }
+  }
+
+  return bank;
+}

@@ -7,3 +7,18 @@
 // For an input String: "hey You, Sort me Already!" the function should return: "You, Sort Already! hey me"
 
 // My Solution:
+
+function capitalsFirst(str) {
+  let capitals = [];
+  let nonCap = [];
+
+  for (let el of str.split(" ")) {
+    if (el[0] >= "A" && el[0] <= "Z") {
+      capitals.push(el);
+    } else if (el[0] >= "a" && el[0] <= "z") {
+      nonCap.push(el);
+    }
+  }
+
+  return capitals.concat(nonCap).join(" ");
+}

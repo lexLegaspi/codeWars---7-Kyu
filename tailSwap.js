@@ -7,3 +7,11 @@
 // ["a:12345", "777:xyz"]  -->  ["a:xyz", "777:12345"]
 
 // My Solution:
+
+function tailSwap(arr) {
+  // your code here
+  arr = arr.map((x) => x.split(":"));
+  let tail1 = arr[0][1];
+  let tail2 = arr[1][1];
+  return [arr[0][0] + ":" + tail2, arr[1][0] + ":" + tail1];
+}

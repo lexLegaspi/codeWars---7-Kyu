@@ -13,3 +13,12 @@
 // Good luck!
 
 // My Solution:
+
+function solve(a, b) {
+  let counts = [];
+
+  for (let el of b) {
+    counts.push(a.filter((x) => x == el).length);
+  }
+  return counts;
+}

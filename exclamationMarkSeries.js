@@ -14,3 +14,10 @@
 // "!????!!!?" --->  20
 
 // My Solution:
+
+function product (string) {
+  //coding and coding....
+  let que = string.split('?').length - 1
+  let exc = string.split('!').length - 1
+  return que*exc;
+}

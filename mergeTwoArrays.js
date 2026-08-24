@@ -12,3 +12,15 @@
 // Inspired by https://adriann.github.io/programming_problems.html
 
 // My Solution:
+
+function mergeArrays(a, b) {
+  // your code here
+  let result = [];
+  let length = Math.min(a.length, b.length);
+
+  for (let i = 0; i < length; i++) {
+    result.push(a.shift());
+    result.push(b.shift());
+  }
+  return result.concat(a.concat(b));
+}

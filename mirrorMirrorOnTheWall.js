@@ -14,3 +14,11 @@
 // [-5, 10, 8, 10, 2, -3, 10] --> [-5, -3, 2, 8, 10, 10, 10, 10, 10, 8, 2, -3, -5]
 
 // My Solution:
+
+function mirror(data) {
+  /* go ahead */
+  let left = [...data];
+  left = left.sort((a, b) => a - b);
+  let right = [...left].reverse().slice(1);
+  return left.concat(right);
+}

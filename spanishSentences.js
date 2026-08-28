@@ -14,3 +14,16 @@
 // P.S. Array's length > 0.
 
 // My solution:
+
+function spanishSent(arr) {
+  //good luck
+  arr = arr.filter(
+    (x) =>
+      (x[0] == "¿" && x[x.length - 1] == "?") ||
+      (x[0] == "¡" && x[x.length - 1] == "!"),
+  );
+
+  let sens = "sentence";
+  if (arr.length != 1) sens = "sentences";
+  return `¡${arr.length} spanish ${sens} here and hasta la vista, baby!`;
+}

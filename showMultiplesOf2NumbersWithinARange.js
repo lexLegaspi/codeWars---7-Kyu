@@ -7,3 +7,11 @@
 // 2, 4, 40 --> [4, 8, 12, 16, 20, 24, 28, 32, 36, 40]
 
 // My Solution:
+
+function multiples(a, b, limit) {
+  let result =[]
+  for (let i =1; i<=limit;i++){
+    if(i%a == 0 && i%b == 0) result.push(i)
+  }
+    return result;
+}

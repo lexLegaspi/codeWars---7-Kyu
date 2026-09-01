@@ -9,3 +9,12 @@
 // All inputs will be arrays of numbers. All character codes are valid lower case letters. The input array will not be empty.
 
 // My Solution:
+
+function numObj(s) {
+  let result = [];
+  for (let i = 0; i < s.length; i++) {
+    result.push({ [s[i]]: String.fromCharCode(s[i]) });
+  }
+
+  return result;
+}

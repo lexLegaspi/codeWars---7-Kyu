@@ -16,3 +16,10 @@
 // Any character can be censored.
 
 // My Solution:
+
+function uncensor(infected, discovered) {
+  for (let i = 0; i < discovered.length; i++) {
+    infected = infected.replace("*", discovered[i]);
+  }
+  return infected;
+}

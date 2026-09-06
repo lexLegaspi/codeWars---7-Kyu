@@ -8,3 +8,14 @@
 // 'abc-#@5'  --> '123-#@5'
 
 // My Solution:
+
+function encode(str) {
+  // Write code here.
+  str = str.split("").map((x) => {
+    if ((x >= "a" && x <= "z") || (x >= "A" && x <= "Z")) {
+      return x.toLowerCase().charCodeAt(0) - 96;
+    } else return x;
+  });
+
+  return str.join("");
+}

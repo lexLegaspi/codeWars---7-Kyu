@@ -6,5 +6,9 @@
 // [5, 7, 5, 9, 7] ==> 579
 // [1, 9, 3, 1, 7, 4, 6, 6, 7]  ==> 134679
 
-
 // My Solution:
+
+function minValue(values) {
+  //your code here
+  return +[...new Set(values)].sort().join("");
+}

@@ -11,3 +11,19 @@
 // shifter("") === 0 // no shifter words in empty string
 
 // My Solution:
+
+function shifter(s) {
+  if (s.length == 0) return 0;
+  let shifterLetters = ["H", "I", "N", "O", "S", "X", "Z", "M", "W"];
+  let result = "";
+  s = [...new Set(s.split(" "))].join(" ");
+  for (let i = 0; i < s.length; i++) {
+    if (shifterLetters.includes(s[i])) {
+      result += "#";
+    } else {
+      result += s[i];
+    }
+  }
+  return result.split(" ").filter((x) => x.split("").every((y) => y == "#"))
+    .length;
+}

@@ -22,3 +22,8 @@
 // ]
 
 // My Solution:
+
+function sortList(sortBy, list) {
+  let result = list;
+  return [...list].sort((a, b) => b[sortBy] - a[sortBy]);
+}

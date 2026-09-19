@@ -11,4 +11,15 @@
 
 // My Solution:
 
+function digits(n) {
+  n = String(n).split("").map(Number);
+  let result = [];
 
+  for (let i = 0; i < n.length; i++) {
+    for (let j = i + 1; j < n.length; j++) {
+      result.push(n[i] + n[j]);
+    }
+  }
+
+  return result;
+}

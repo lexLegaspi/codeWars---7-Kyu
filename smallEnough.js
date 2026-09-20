@@ -3,3 +3,7 @@
 // You can assume all values in the array are numbers.
 
 // My Solution:
+
+function smallEnough(a, limit){
+  return a.every(x=> x<=limit)
+}

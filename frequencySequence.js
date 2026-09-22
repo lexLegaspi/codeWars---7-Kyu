@@ -7,3 +7,9 @@
 // "^^^**$"     , "x" --> "3x3x3x2x2x1"
 
 // My Solution:
+
+function freqSeq(str, sep) {
+  str = str.split("");
+
+  return str.map((x) => str.filter((y) => y == x).length).join(sep);
+}

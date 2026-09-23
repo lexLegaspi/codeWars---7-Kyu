@@ -7,3 +7,16 @@
 // "moOse" --> false (ignore letter case)
 
 // My Solution:
+
+function isIsogram(str) {
+  //...
+  if (str == "") return true;
+
+  str = str.toLowerCase().split("");
+
+  for (let el of str) {
+    if (str.filter((x) => x === el).length > 1) return false;
+  }
+
+  return true;
+}

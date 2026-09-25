@@ -14,6 +14,18 @@
 
 // e.g: "it's / I'm" should become: "t's / I'M"
 
-
-
 // My Solution:
+
+function smallWordHelper(sentence) {
+  sentence = sentence.split(" ").map((x) => {
+    let vowels = "aeiouAEIOU";
+    if (x.length < 4) {
+      return x.toUpperCase();
+    }
+    return x
+      .split("")
+      .filter((y) => !vowels.includes(y))
+      .join("");
+  });
+  return sentence.join(" "); // your code here
+}

@@ -9,3 +9,7 @@
 // [1, 3, 10, 0]) --> [3, 10]
 
 // My Solution:
+
+function twoOldestAges(ages) {
+  return ages.sort((a, b) => a - b).slice(-2);
+}

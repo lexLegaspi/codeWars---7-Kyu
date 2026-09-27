@@ -7,3 +7,9 @@
 // Don't worry about bad input, you will always receive a finite list of integers.
 
 // My Solution:
+
+var filterLucky = (x) => {
+  return x.filter((lucky) => {
+    if (String(lucky).includes("7")) return lucky;
+  });
+};

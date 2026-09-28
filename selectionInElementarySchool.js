@@ -15,13 +15,33 @@
 
 // schoolSelection([5, 7, 4, 9, 10, 5, 15, 9, 5])
 
-// Output: 
+// Output:
 // {
 //   'Kindergarten': 3,
 //   '1st grade': 0,
-//   '2nd grade': 1, 
-//   '3rd grade': 0, 
+//   '2nd grade': 1,
+//   '3rd grade': 0,
 //   '4th grade': 2,
 // }
 
 // My Solution:
+
+function schoolSelection(array) {
+  //good luck
+  let grade = {
+    Kindergarten: 0,
+    "1st grade": 0,
+    "2nd grade": 0,
+    "3rd grade": 0,
+    "4th grade": 0,
+  };
+
+  for (let el of array) {
+    if (el == 9) grade["4th grade"]++;
+    else if (el == 8) grade["3rd grade"]++;
+    else if (el == 7) grade["2nd grade"]++;
+    else if (el == 6) grade["1st grade"]++;
+    else if (el == 5) grade["Kindergarten"]++;
+  }
+  return grade;
+}

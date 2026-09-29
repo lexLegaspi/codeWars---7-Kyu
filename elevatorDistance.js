@@ -13,3 +13,19 @@
 // Array will always contain at least 2 floors. Random tests will contain 2-20 elements in array, and floor values between 0 and 30.
 
 // My Solution:
+
+function elevatorDistance(array) {
+  // your code here
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i + 1] !== undefined) {
+      if (array[i] < array[i + 1]) {
+        total += array[i + 1] - array[i];
+      } else if (array[i] > array[i + 1]) {
+        total += array[i] - array[i + 1];
+      }
+    }
+  }
+
+  return total;
+}

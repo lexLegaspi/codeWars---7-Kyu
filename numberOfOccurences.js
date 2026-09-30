@@ -10,3 +10,10 @@
 // arr.numberOfOccurrences(3) === 1;
 
 // My Solution:
+
+Object.defineProperty(Array.prototype, 'numberOfOccurrences',{ 
+  value : function numberOfOccurrences(element) {
+    return this.filter(x=>x===element).length
+  }
+});
+

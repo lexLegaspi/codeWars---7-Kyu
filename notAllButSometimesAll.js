@@ -8,7 +8,6 @@
 // // remove from 'this is a string' the first 1 't' and the first 2 i's.
 // "this is a string", {'t':1, 'i':2} ==> "hs s a string"
 
-
 // // there are no x's or i's, so nothing gets removed
 // "hello world", {'x':5, 'i':2} ==> "hello world"
 
@@ -16,3 +15,16 @@
 // "apples and bananas", {'a':50, 'n':1} ==> "pples d bnns"
 
 // My Solution:
+
+function remove(str, what) {
+  //code me
+
+  for (let [key, value] of Object.entries(what)) {
+    while (value > 0) {
+      str = str.replace(key, "");
+      value--;
+    }
+  }
+
+  return str;
+}

@@ -15,5 +15,22 @@
 // 123"
 // Note: 9 digits so 3 squared (3x3 perfect square). 3 digits on each line.
 
-
 // My Solution:
+
+function squareIt(int) {
+  int = String(int);
+
+  let result = [];
+  let root = Math.sqrt(int.length);
+  if (!Number.isInteger(root)) return "Not a perfect square!";
+
+  for (let i = 0; i < int.length; i += root) {
+    if (result.length == 0) {
+      result.push(int.slice(i, i + root));
+    } else {
+      result.push("\n" + int.slice(i, i + root));
+    }
+  }
+
+  return result.join("");
+}

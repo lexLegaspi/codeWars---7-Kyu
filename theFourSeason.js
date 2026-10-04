@@ -7,3 +7,11 @@
 // Note: We are not considering leap years.
 
 // My Solution:
+
+function fourSeasons(d) {
+  if (d > 365) return "The year flew by!";
+  else if (d >= 355 || d <= 79) return "Winter Season";
+  else if (d >= 80 && d <= 171) return "Spring Season";
+  else if (d >= 172 && d <= 263) return "Summer Season";
+  else if (d >= 264 && d <= 354) return "Autumn Season";
+}

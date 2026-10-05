@@ -7,3 +7,14 @@
 // Note: the digits in the resulting string should be sorted.
 
 // My Solution:
+
+function unusedDigits() {
+  let arg = Array.from(arguments).join("");
+  let result = "";
+  for (let i = 0; i <= 9; i++) {
+    if (!arg.includes(String(i))) {
+      result += i;
+    }
+  }
+  return result;
+}

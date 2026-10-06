@@ -16,3 +16,13 @@
 // // should return "invalid track time"
 
 // My Solution:
+
+function perc(mins) {
+  if (mins < 1 || mins > 100 || typeof mins != "number")
+    return "invalid track time";
+  return [
+    `${Math.round(120 * mins)} kicks`,
+    `${Math.round(240 * mins)} hihats`,
+    `${Math.round(60 * mins)} claps`,
+  ];
+}

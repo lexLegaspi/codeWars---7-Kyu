@@ -33,3 +33,19 @@
 // 709 ==> return "NOT!!"
 
 // My Solution:
+
+function specialNumber(n) {
+  //your code here
+  if (n <= 5 && n >= 0) return "Special!!";
+  else if (n < 10) return "NOT!!";
+
+  n = String(n)
+    .split("")
+    .map((x) => {
+      if (x > 5) return "NOT!!";
+      else return x;
+    });
+
+  if (n.includes("NOT!!")) return "NOT!!";
+  else return "Special!!";
+}

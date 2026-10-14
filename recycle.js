@@ -16,3 +16,16 @@
 // // Output: [3, 3, 1]
 
 // My Solution:
+
+function recycleMe(recycle) {
+  // your code here
+  let result = [0, 0, 0];
+
+  for (let i = 0; i < recycle.length; i++) {
+    if (recycle[i] > 0) result[0]++;
+    else if (recycle[i] < 0) result[1]++;
+    else if (recycle[i] == 0) result[2]++;
+  }
+
+  return result;
+}

@@ -10,3 +10,10 @@
 // ",,,,,,,"         --> []
 
 // My Solution:
+
+function stringToIntArray(s) {
+  return s
+    .split(",")
+    .filter((x) => x != "")
+    .map(Number);
+}

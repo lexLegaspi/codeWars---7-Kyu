@@ -10,6 +10,17 @@
 // You need to be able to use all the caracters from the two strings so:
 // isMatching("kata", "kt", "aaa") return false
 
-
-
 // My Solution:
+
+function isMatching(string, str1, str2) {
+  let right = str1
+    .split(" ")
+    .join("")
+    .concat(str2.split(" ").join(""))
+    .toLowerCase()
+    .split("")
+    .sort()
+    .join("");
+  let left = string.split(" ").join("").toLowerCase().split("").sort().join("");
+  return right == left;
+}

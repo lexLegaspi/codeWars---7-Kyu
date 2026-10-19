@@ -17,3 +17,10 @@
 
 // My Solution:
 
+function printerError(s) {
+  // your code
+  let valid = "abcdefghijklm";
+  let denom = s.length;
+  let error = s.split("").filter((x) => !valid.includes(x)).length;
+  return `${error}/${denom}`;
+}

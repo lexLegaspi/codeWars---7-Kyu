@@ -7,3 +7,11 @@
 // You may assume both integers are positive integers.
 
 // My Solution:
+
+function add(num1, num2) {
+  let max = Math.max(String(num1).split('').length, String(num2).split('').length)
+  let tempNum1 = [...Array(max - String(num1).length).fill('0'), ...String(num1)];
+  let tempNum2 = [...Array(max - String(num2).length).fill('0'), ...String(num2)]
+
+  return +tempNum1.map((x, i) => Number(x) + Number(tempNum2[i])).join('')
+}

@@ -6,7 +6,7 @@
 
 // For example:
 
-//     Correct answer    |    Student's answer   |   Result         
+//     Correct answer    |    Student's answer   |   Result
 //  ---------------------|-----------------------|-----------
 //  ["a", "a", "b", "b"]   ["a", "c", "b", "d"]  →     6
 //  ["a", "a", "c", "b"]   ["a", "a", "b", "" ]  →     7
@@ -14,3 +14,19 @@
 //  ["b", "c", "b", "a"]   ["" , "a", "a", "c"]  →     0
 
 //  My Solution:
+
+function checkExam(array1, array2) {
+  // good luck
+  let result = 0;
+  for (let i = 0; i < array2.length; i++) {
+    if (array2[i] == "") {
+      continue;
+    } else if (array2[i] == array1[i]) {
+      result += 4;
+    } else if (array2[i] != array1[i]) {
+      result -= 1;
+    }
+  }
+
+  return result < 0 ? 0 : result;
+}

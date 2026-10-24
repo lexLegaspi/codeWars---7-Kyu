@@ -13,3 +13,12 @@
 // Each element in the arrays will start with a unique letter so there will only be a single match for each element.
 
 // My Solution:
+
+function sortArray(a1, a2) {
+  let result = [];
+  for (let i = 0; i < a1.length; i++) {
+    let initial = a1[i].slice(0, 1);
+    result.push(a2.filter((x) => x[0] == initial).join(""));
+  }
+  return result;
+}

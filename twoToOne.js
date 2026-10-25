@@ -9,3 +9,11 @@
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 // My Solution:
+
+function longest(s1, s2) {
+  // your code
+  let result = s1 + s2;
+
+  return [...new Set(result.split("").sort())].join("");
+}
+

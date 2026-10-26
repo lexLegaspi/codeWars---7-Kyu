@@ -14,10 +14,18 @@
 // 1  1  0
 // 0  0  0
 // 0  1  1
-// [1, 1, 0, 0, 1, 0, 0, 1] => "No" 
+// [1, 1, 0, 0, 1, 0, 0, 1] => "No"
 // This array cannot be represented as a n x n matrix, so it's invalid.
 
-// [1, 0, 1, 1, 0, 0, 0, 0, 0] => "No" 
+// [1, 0, 1, 1, 0, 0, 0, 0, 0] => "No"
 // This password is not symmetric along the centre point.
 
 // My Solution:
+
+function helpZoom(key) {
+  //code here..
+  let left = key.join("").slice(0, Math.floor(key.length / 2));
+  let right = key.join("").slice(Math.ceil(key.length / 2));
+
+  return left.split("").reverse().join("") === right ? "Yes" : "No";
+}

@@ -3,3 +3,7 @@
 // Determine if any of the numbers in the array is the index of the "odd" word. If so, return true, otherwise false.
 
 // My Solution:
+
+function oddBall(arr) {
+  return arr.includes(arr.indexOf("odd")); // your code here
+}

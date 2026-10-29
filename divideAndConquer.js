@@ -4,3 +4,15 @@
 
 // My Solution:
 
+function divCon(x) {
+  let left = 0;
+  let right = 0;
+  for (let el of x) {
+    if (typeof el === "number") {
+      left += el;
+    } else {
+      right += Number(el);
+    }
+  }
+  return left - right;
+}

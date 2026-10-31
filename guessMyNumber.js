@@ -14,3 +14,15 @@
 // The phone number will always be a ten digit number in the format ###-###-####. If no phone number is supplied, 123-451-2345 should be used as the default.
 
 // My Solution:
+
+
+function guessMyNumber(guess, number = '123-451-2345') {
+  // Your code here
+  return number.split('').map(x=> {
+    if(guess.includes(x) || x == '-'){
+       return x
+       }else{
+      return '#'
+    }
+  }).join('');
+}

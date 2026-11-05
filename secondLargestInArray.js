@@ -24,3 +24,20 @@
 // Not-NaN strings represent safe Integers.
 
 // My Solution:
+
+function secondLargest(array) {
+  // Have Fun ^_^
+  console.log(array);
+  if (!Array.isArray(array) || !array) return undefined;
+
+  array = array
+    .filter((x) => typeof x == "number" || typeof x == "string")
+    .map(Number)
+    .sort((a, b) => b - a);
+  let largest = array[0];
+  if (array.every((x) => x === array[0])) return undefined;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < largest) return array[i];
+  }
+  return largest;
+}
